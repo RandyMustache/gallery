@@ -120,6 +120,13 @@ h1. License
 
 Distributed under the terms of the "MIT License":http://opensource.org/licenses/MIT
 
+h1. Example
+
+<pre>
+  $ create_gallery.rb gallery_1
+  $ jekyll
+</pre>
+
 h1. Limitations
 
 ... or opportunities for developers:
