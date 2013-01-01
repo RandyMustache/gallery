@@ -1,0 +1,113 @@
+<html>
+  <head>
+	<style>
+	  body {
+	    font-family: "Helvetica Neue", Helvetica, Arial;
+	    font-size: 14px;
+
+  	    background: #fff;
+	    color: #333;
+	  }
+
+	  h1 {
+	    padding-bottom: 10px;
+	    border-bottom: 1px solid #ccc;
+	    margin-bottom: 2px;
+	  }
+
+	  .navigation {
+	    padding: 5px 0px 5px 0px;
+	    list-style-type: none;
+	    margin-top: 0px;
+	    margin-bottom: 24px;
+	  }
+
+	  .navigation li {
+	    float: left;
+	  }
+
+	  .navigation li.index {
+	    width: 80px;
+	  }
+
+	  .navigation li.left {
+	    text-align: right;
+	    width: 40px;
+	  }
+
+	  .navigation li.count {
+	    text-align: center;
+	    width: 50px;
+	    padding: 0px 5px 0px 5px;
+	  }
+
+	  .navigation li.right {
+	    text-align: left;
+	    width: 40px;
+	  }
+
+	  a {
+	   text-decoration: none;
+	   color: #999;
+	  }
+
+	  a:hover {
+	   color: #666;
+	  }
+
+	  div.photo {
+	    align: center;
+	    padding: 10px 40px 10px 40px;
+	  }
+
+	  .title {
+	    font-weight: bold;
+	  }
+
+	  .exif {
+	    color: #777
+	  }
+
+	  img.photo {
+	    width: 800px;
+	    padding: 6px;
+	    border: 1px solid #ccc;
+	  }
+
+	</style>
+  </head>
+  <body>
+	<h1>{{page.gallery}} {{page.title}}</h1>
+
+	<ul class="navigation">
+	  <li class="index"><a href="{{page.gallery_index}}">Index</a></li>
+	  <li class="left">
+          &nbsp;
+          {% if page.prev %}
+	        <a href="{{page.prev}}">&#9668;</a>
+          {% endif %}
+	  </li>
+	  <li class="count">{{page.index}}/{{page.total}}</li>
+	  <li class="right">
+		  {% if page.next %}
+    	    <a href="{{page.next}}">&#9658;</a>
+		  {% endif %}
+		  &nbsp;
+	  </li>
+	</ul>
+
+	<div class="photo">
+	  <a href="{{page.img}}">
+		<img class="photo" src="{{page.img}}">
+	  </a>
+	</div>
+	<div class="exif">
+	  <b>Filename:</b> <a href="{{page.img}}">{{page.img}}</a> <br />
+	  <b>Date:</b> {{page.date_time}} <br />
+	  <b>Camera model:</b> {{page.model}} <br />
+	  <b>Aperture:</b> {{page.aperture}} <br />
+	  <b>Exposure:</b> {{page.exposure}} <br />
+	  <b>Image size:</b> {{page.size}}
+	</div>
+  </body>
+</html>

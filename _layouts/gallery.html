@@ -1,0 +1,54 @@
+<html>
+  <head>
+	<title>Gallery</title>
+	<style>
+	  body {
+	    font-family: "Helvetica Neue", Helvetica, Arial;
+	    font-size: 14px;
+
+  	    background: #fff;
+	    color: #333;
+	  }
+
+	  h1 {
+	    padding-bottom: 10px;
+	    border-bottom: 1px solid #ccc;
+	  }
+
+	  ul.gallery {
+	    list-style-type: none;
+	  }
+
+	  ul.gallery li {
+	    float: left;
+	    padding: 20px;
+	    height: 230;
+	    width: 210;
+	  }
+
+	  ul.gallery li img {
+	    padding: 6px;
+	    border: 1px solid #ccc;
+	  }
+
+	  .caption {
+	    padding-top: 2px;
+	  }
+
+	  .title {
+	    font-weight: bold;
+	  }
+
+	  .exif {
+	    font-size: smaller;
+	    color: #777
+	  }
+
+	</style>
+  </head>
+  <body>
+	<h1>{{page.title}}</h1>
+
+	{{content}}
+  </body>
+</html>

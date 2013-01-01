@@ -1,0 +1,1 @@
+exclude: ['README.textile', 'LICENSE.txt', 'create_gallery.rb' ]
